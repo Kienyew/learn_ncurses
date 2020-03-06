@@ -30,10 +30,10 @@ int main() {
     int c;
     initscr();
     keypad(stdscr, TRUE);
-    help_win = newwin(0, 0, 0, 0);
-    mvwaddstr(help_win, 6, 32, "Help menu sreen");
-    mvwaddstr(help_win, 9, 28, "Press ~ key to quit");
-    mvwaddstr(help_win, 12, 28, "Press enter to go back");
+    help_win = newwin(10, 30, 4, 26);
+    mvwaddstr(help_win, 1, 7, "Help menu sreen");
+    mvwaddstr(help_win, 5, 3, "Press ~ key to quit");
+    mvwaddstr(help_win, 8, 4, "Press enter to go back");
 
     addstr("Typer Program\n");
     addstr("Press + for help\n\n");
