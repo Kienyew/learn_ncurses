@@ -51,6 +51,7 @@ int main() {
         }
     }
 
+    delwin(help_win);
     endwin();
     return 0;
 }
