@@ -21,7 +21,7 @@ int main(int argc, char* argv[]) {
     start_color();
     init_pair(1, COLOR_WHITE, COLOR_BLUE);
 
-    lister = newwin(getmaxy(stdscr) * 3/4, getmaxx(stdscr) / 2, 0, getmaxx(stdscr) / 4);
+    lister = newwin(getmaxy(stdscr), getmaxx(stdscr) / 2, 0, getmaxx(stdscr) / 4);
     wbkgd(lister, COLOR_PAIR(1) | ' ');
     wattron(lister, A_BOLD);
     immedok(lister, TRUE);
