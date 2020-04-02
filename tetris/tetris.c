@@ -413,7 +413,7 @@ void update_game()
         _curshape.struc = struc;
         _curshape.color_pair = RANDINT(1, 6);
         _curshape.y = 0;
-        _curshape.x = BOARD_COLS / 2 - struc->n / 2;
+        _curshape.x = RANDINT(0, BOARD_COLS - struc->n);
         _curshape.rot = ROT_UP;
         curshape = &_curshape;
 
@@ -426,6 +426,7 @@ void update_game()
             }
         }
     }
+
     assert(curshape != NULL);
 
     if (getgametime_ms() >= nextforcedroptime) {
@@ -468,6 +469,7 @@ void update_game()
             tetris_remove_line(row);
         }
     }
+    free(line_complete);
 }
 
 void draw_game()
