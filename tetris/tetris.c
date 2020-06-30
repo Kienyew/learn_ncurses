@@ -283,7 +283,9 @@ void parse_args(int argc, char* argv[])
                 goto invalid_option;
 
             DROP_SPEED_MS = _speed;
-        } 
+        } else {
+            goto invalid_option;
+        }
     }
 
     return;
