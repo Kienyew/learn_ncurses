@@ -16,6 +16,6 @@ long getgametime_ms() {
     struct timespec interval;
     struct timespec timenow;
     clock_gettime(CLOCK_REALTIME, &timenow);
-    ts_interval(&_gamestarttime, &timenow, &interval);
+    ts_interval(&gamestarttime, &timenow, &interval);
     return interval.tv_sec * 1000 + interval.tv_nsec / 1000000;
 }

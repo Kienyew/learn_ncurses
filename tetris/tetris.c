@@ -70,7 +70,7 @@ int BOARD_COLS = 0;
 int BOARD_ROWS = 0;
 int DROP_SPEED_MS = 0;
 
-extern struct timespec _gamestarttime;
+struct timespec gamestarttime;
 
 WINDOW* gamewin;
 WINDOW* statwin;
@@ -534,8 +534,8 @@ int main(int argc, char* argv[])
     init_pair(5, COLOR_WHITE, COLOR_YELLOW);
     init_pair(6, COLOR_WHITE, COLOR_GREEN);
 
-    clock_gettime(CLOCK_REALTIME, &_gamestarttime);
-    srand(_gamestarttime.tv_nsec);
+    clock_gettime(CLOCK_REALTIME, &gamestarttime);
+    srand(gamestarttime.tv_nsec);
 
     init_windows();
     while (!gameover) {
